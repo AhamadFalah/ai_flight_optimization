@@ -1,0 +1,39 @@
+# Virtual Environment
+venv/
+
+# API Keys
+api/api_keys.py
+
+# Environment Variables
+.env
+
+# Data and Logs
+data/
+*.json
+*.csv
+logs/
+
+# Python Compiled Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook Checkpoints
+notebooks/.ipynb_checkpoints
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Configurations
+.idea/
+.vscode/
+
+# Machine Learning Models
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.onnx
+
+
