@@ -1,0 +1,17 @@
+requests
+pandas
+numpy
+joblib
+scikit-learn
+tensorflow
+keras
+networkx
+matplotlib
+folium
+geopy  
+apscheduler
+metar
+datetime
+logging
+flask  
+
