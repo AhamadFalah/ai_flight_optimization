@@ -1,39 +1,65 @@
-# Virtual Environment
+# Python virtual environments
 venv/
+py311env/
+*env/
+ENV/
 
-# API Keys
-api/api_keys.py
-
-# Environment Variables
-.env
-
-# Data and Logs
-data/
-*.json
-*.csv
-logs/
-
-# Python Compiled Files
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 
-# Jupyter Notebook Checkpoints
-notebooks/.ipynb_checkpoints
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# OS Files
+# Model files and checkpoints
+model/
+*.h5
+*.pb
+*.pt
+*.ckpt
+*.pth
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
 .DS_Store
 Thumbs.db
 
-# IDE Configurations
-.idea/
-.vscode/
+# Log files
+*.log
+logs/
+tensorboard/
 
-# Machine Learning Models
-models/*.pkl
-models/*.h5
-models/*.pt
-models/*.onnx
+# Data files that might be large
+*.csv
+*.npy
+*.npz
+*.pkl
+data/raw/
 
-
+# Environment variables
+.env
