@@ -98,7 +98,7 @@ agent.initialize()
 
 # Load the trained checkpoint:
 
-MODEL_DIR = "models"
+MODEL_DIR = "model"
 checkpoint = tf.train.Checkpoint(agent=agent)
 latest_ckpt = tf.train.latest_checkpoint(MODEL_DIR)
 if latest_ckpt:
