@@ -135,7 +135,7 @@ for iteration in range(num_iterations):
         print(f"Iteration {iteration}: loss = {train_loss.numpy():.3f}")
 
 # Save the trained model for later inference
-MODEL_DIR = "models"
+MODEL_DIR = "model"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # Use TensorFlows checkpoint mechanism instead of agent.save()
