@@ -36,6 +36,9 @@ model/
 *.ckpt
 *.pth
 
+# Data files
+data/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
