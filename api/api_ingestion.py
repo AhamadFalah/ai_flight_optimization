@@ -37,7 +37,7 @@ def save_flight_data(data):
     else:
         print("No flight data to save!")
 
-# Weather Data (Grid-based):
+# Weather Data (Grid based):
 OPENWEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 API_KEY = "1cee8056d94879a5018a7f0d339dad98"
 LAT_MIN, LAT_MAX = 51.0, 51.6
@@ -107,3 +107,11 @@ def append_data_to_file(file_path, new_data):
     with open(file_path, "w") as f:
         json.dump(data_list, f, indent=2)
 
+def process_rain_data(rain_field):
+    if isinstance(rain_field, dict) and '1h' in rain_field:
+        return rain_field['1h']
+    elif isinstance(rain_field, (int, float)):
+        return rain_field
+    else:
+        # Default value if data is missing or malformed
+        return 0.0
