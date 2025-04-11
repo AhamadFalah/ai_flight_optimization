@@ -1,0 +1,5 @@
+requests==2.31.0
+dash==2.9.4
+tensorflow==2.14.0
+tf-agents==0.18.0
+gymnasium==0.28.1

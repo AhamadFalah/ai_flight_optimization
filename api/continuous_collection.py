@@ -2,16 +2,18 @@ import requests
 import json
 import os
 import time
+
+from api_ingestion import (
+    get_flight_data,
+    append_data_to_file,  # Use the append function
+    fetch_weather_data_grid,
+    save_weather_data_grid,
+    FLIGHT_DATA_PATH,
+    WEATHER_DATA_PATH
+)
+
 from datetime import datetime
 
-# OpenSky API endpoint and bounding box parameters for flight data
-OPENSKY_URL = "https://opensky-network.org/api/states/all"
-params_flight = {
-    "lamin": 51.0,
-    "lomin": -0.6,
-    "lamax": 51.6,
-    "lomax": 0.2
-}
 
 # OpenWeather API endpoint and parameters for weather data
 OPENWEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -76,7 +78,6 @@ def append_data_to_file(file_path, new_data):
     with open(file_path, "w") as f:
         json.dump(data_list, f, indent=2)
 
-# Main: 
 
 if __name__ == "__main__":
     print("Starting continuous data collection every 5 seconds...")
@@ -88,10 +89,19 @@ if __name__ == "__main__":
             if flight_data:
                 append_data_to_file(FLIGHT_DATA_FILE, flight_data)
                 print(f"Flight data appended at {flight_data['timestamp']}")
-            if weather_data:
-                append_data_to_file(WEATHER_DATA_FILE, weather_data)
-                print(f"Weather data appended at {weather_data['timestamp']}")
 
-            time.sleep(15)  # Wait for 5 seconds before next collection
+            else:
+                print("No flight data retrieved.")
+
+            # Get grid-based weather data (returns a list of weather data entries)
+            weather_grid = fetch_weather_data_grid()
+            if weather_grid:
+                save_weather_data_grid(weather_grid)
+                print("Weather grid data appended.")
+            else:
+                print("No weather grid data retrieved.")
+
+            time.sleep(5)  # Wait 5 seconds before the next collection cycle
+
     except KeyboardInterrupt:
         print("Data collection stopped by user.")
