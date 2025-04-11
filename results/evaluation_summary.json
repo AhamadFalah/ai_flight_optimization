@@ -1,0 +1,47 @@
+[
+  {
+  "latitude": 51.34642073475129,
+  "longitude": -0.09562283395861215,
+  "baro_altitude": 8653,
+  "velocity": 227,
+  "true_track": 163,
+  "vertical_rate": 0
+
+  },
+  {
+    "route_id": "route_2",
+    "total_reward": -134.48300663661604,
+    "steps": 200,
+    "total_turbulence": 16.16203387427851,
+    "total_fuel": 228.4478629999992,
+    "reached_destination": false,
+    "trajectory_file": "results\\route_2_trajectory.json"
+  },
+  {
+    "route_id": "route_3",
+    "total_reward": -107.19493164399336,
+    "steps": 13,
+    "total_turbulence": 1.3775085528912527,
+    "total_fuel": 18.276180000000004,
+    "reached_destination": false,
+    "trajectory_file": "results\\route_3_trajectory.json"
+  },
+  {
+    "route_id": "route_4",
+    "total_reward": -178.2060679783404,
+    "steps": 13,
+    "total_turbulence": 1.4249199958926957,
+    "total_fuel": 32.810570000000006,
+    "reached_destination": false,
+    "trajectory_file": "results\\route_4_trajectory.json"
+  },
+  {
+    "route_id": "route_5",
+    "total_reward": -91.47865015148113,
+    "steps": 20,
+    "total_turbulence": 1.976653789884866,
+    "total_fuel": 48.98079999999999,
+    "reached_destination": false,
+    "trajectory_file": "results\\route_5_trajectory.json"
+  }
+]
