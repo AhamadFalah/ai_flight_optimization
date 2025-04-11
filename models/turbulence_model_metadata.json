@@ -1,0 +1,60 @@
+{
+  "model_type": "RandomForestRegressor",
+  "features": [
+    "velocity",
+    "baro_altitude",
+    "vertical_rate",
+    "temperature",
+    "pressure",
+    "humidity",
+    "wind_speed",
+    "wind_deg"
+  ],
+  "performance": {
+    "mse": 0.00020545905917337967,
+    "r2": 0.9671194599226962,
+    "mae": 0.009258857123522233
+  },
+  "feature_importance": [
+    {
+      "feature": "vertical_rate",
+      "importance": 2.075376691764398,
+      "std": 0.32062272753827076
+    },
+    {
+      "feature": "velocity",
+      "importance": 0.03158828103447592,
+      "std": 0.01211503069337909
+    },
+    {
+      "feature": "baro_altitude",
+      "importance": 0.003511396905921982,
+      "std": 0.001078343533039872
+    },
+    {
+      "feature": "wind_speed",
+      "importance": 0.003356651784146958,
+      "std": 0.0010086733347152614
+    },
+    {
+      "feature": "humidity",
+      "importance": 0.0015859589084102677,
+      "std": 0.0007287241734717991
+    },
+    {
+      "feature": "temperature",
+      "importance": 0.0010309388549234022,
+      "std": 0.000796392560716507
+    },
+    {
+      "feature": "wind_deg",
+      "importance": 0.0004778181910257473,
+      "std": 0.0001947323840707891
+    },
+    {
+      "feature": "pressure",
+      "importance": -5.8234369291765284e-05,
+      "std": 4.215008672769842e-05
+    }
+  ]
+}
